@@ -4,4 +4,15 @@
 
 .Palette-colors {
     height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer {
+    height: 10%;
+    background: #2f3640;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

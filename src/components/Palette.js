@@ -12,6 +12,7 @@ class Palette extends Component {
         return (
             <div className="Palette">
                 <div className="Palette-colors">{colorBoxes}</div>
+                <footer className="footer">im footer</footer>
             </div>
         );
     }
