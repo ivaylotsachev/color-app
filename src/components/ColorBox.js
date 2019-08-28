@@ -18,8 +18,6 @@ class ColorBox extends Component {
     }
 
     render() {
-        console.error('colorbox', this.props);
-
         const { background, name } = this.props;
         const { copied } = this.state;
 
