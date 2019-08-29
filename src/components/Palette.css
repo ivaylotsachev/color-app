@@ -1,5 +1,7 @@
 .Palette {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .Palette-colors {
@@ -8,11 +10,16 @@
     flex-wrap: wrap;
 }
 
-.footer {
-    height: 10%;
-    background: #2f3640;
-    color: white;
+.Palette-footer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    height: 4vh;
+    padding: 0 1em;
+    font-weight: bold;
+}
+
+.Palette-footer span {
+    margin: 0 10px;
+    display: inline-block;
 }
