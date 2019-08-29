@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import Slider from 'rc-slider';
-import Select from '@material-ui/core/Select';
 import 'rc-slider/assets/index.css';
 import './Navbar.css';
-import { MenuItem } from '@material-ui/core';
+import { MenuItem, IconButton, Select, Snackbar } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
 
 class Navbar extends Component {
     constructor(props) {
         super(props);
-        this.state = { format: 'hex' };
+        this.state = { format: 'hex', open: false };
     }
 
     handleChange = e => {
-        this.setState({ format: e.target.value }, () => {
-            this.props.handleChange(this.state.format);
-        });
+        this.setState({ format: e.target.value, open: true }, () =>
+            this.props.handleChange(this.state.format)
+        );
     };
 
+    closeSnackbar = () => this.setState({ open: false });
+
     render() {
-        const { level, changeLevel, handleChange } = this.props;
+        const { level, changeLevel } = this.props;
         const { format } = this.state;
 
         return (
@@ -51,6 +53,39 @@ class Navbar extends Component {
                         </MenuItem>
                     </Select>
                 </div>
+                <Snackbar
+                    onClose={this.closeSnackbar}
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                    open={this.state.open}
+                    autoHideDuration={3000}
+                    message={
+                        <p id="message-id">
+                            Format changed to{' '}
+                            <span
+                                style={{
+                                    color: 'orange',
+                                    fontWeight: 'bold',
+                                    textTransform: 'uppercase'
+                                }}
+                            >
+                                {format}
+                            </span>
+                        </p>
+                    }
+                    ContentProps={{
+                        'area-describedly': 'message-id'
+                    }}
+                    action={[
+                        <IconButton
+                            onClick={this.closeSnackbar}
+                            key="close"
+                            color="inherit"
+                            area-label="close"
+                        >
+                            <CloseIcon />
+                        </IconButton>
+                    ]}
+                />
             </header>
         );
     }
