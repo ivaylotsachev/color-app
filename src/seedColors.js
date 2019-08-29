@@ -82,7 +82,7 @@ export default [
     {
         paletteName: 'Flat UI Colors American',
         id: 'flat-ui-colors-american',
-        emoji: '🇺🇸',
+        emoji: '🐱',
         colors: [
             { name: 'LightGreenishBlue', color: '#55efc4' },
             { name: 'FadedPoster', color: '#81ecec' },
@@ -109,7 +109,7 @@ export default [
     {
         paletteName: 'Flat UI Colors Aussie',
         id: 'flat-ui-colors-aussie',
-        emoji: '🇦🇺',
+        emoji: '🤘',
         colors: [
             { name: 'Beekeeper', color: '#f6e58d' },
             { name: 'SpicedNectarine', color: '#ffbe76' },

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'rc-slider';
+import { Link } from 'react-router-dom';
 import 'rc-slider/assets/index.css';
 import './Navbar.css';
 import { MenuItem, IconButton, Select, Snackbar } from '@material-ui/core';
@@ -26,7 +27,7 @@ class Navbar extends Component {
         return (
             <header className="Navbar">
                 <div className="logo">
-                    <span>colorpicker</span>
+                    <Link to="/">colorpicker</Link>
                 </div>
                 <div className="slider-container">
                     <span>
