@@ -8,6 +8,7 @@
     "@material-ui/styles": "^4.3.3",
     "chroma-js": "^2.0.6",
     "classnames": "^2.2.6",
+    "clsx": "^1.0.4",
     "rc-slider": "^8.6.13",
     "react": "^16.9.0",
     "react-copy-to-clipboard": "^5.0.1",
