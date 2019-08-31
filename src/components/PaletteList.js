@@ -20,12 +20,16 @@ class PaletteList extends Component {
                         <Link to="/palette/new">Create palette</Link>
                     </nav>
                     <div className={classes.palettes}>
-                        {palettes.map(palette => (
-                            <MiniPalette
-                                {...palette}
-                                handleClick={() => this.goToPalette(palette.id)}
-                            />
-                        ))}
+                        {palettes
+                            .map(palette => (
+                                <MiniPalette
+                                    {...palette}
+                                    handleClick={() =>
+                                        this.goToPalette(palette.id)
+                                    }
+                                />
+                            ))
+                            .reverse()}
                     </div>
                 </div>
             </div>
