@@ -6,8 +6,6 @@ import SingleColorPalette from './components/SingleColorPalette';
 import seedColors from './seedColors';
 import { generatePalette } from './colorHelpers';
 
-import './App.css';
-
 function findPalette(id) {
     return seedColors.find(palette => palette.id === id);
 }
