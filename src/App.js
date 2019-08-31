@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Palette from './components/Palette';
 import PaletteList from './components/PaletteList';
@@ -7,49 +7,74 @@ import NewPaletteForm from './components/NewPaletteForm';
 import seedColors from './seedColors';
 import { generatePalette } from './colorHelpers';
 
-function findPalette(id) {
-    return seedColors.find(palette => palette.id === id);
-}
+class App extends Component {
+    constructor(props) {
+        super(props);
 
-function App() {
-    return (
-        <Switch>
-            <Route
-                exact
-                path="/palette/new"
-                render={params => <NewPaletteForm {...params} />}
-            />
-            <Route
-                path="/palette/:paletteId/:colorId"
-                render={routeProps => (
-                    <SingleColorPalette
-                        colorId={routeProps.match.params.colorId}
-                        palette={generatePalette(
-                            findPalette(routeProps.match.params.paletteId)
-                        )}
-                    />
-                )}
-            />
-            <Route
-                exact
-                path="/"
-                render={routeProps => (
-                    <PaletteList palettes={seedColors} {...routeProps} />
-                )}
-            />
-            <Route
-                exact
-                path="/palette/:id"
-                render={routeProps => (
-                    <Palette
-                        palette={generatePalette(
-                            findPalette(routeProps.match.params.id)
-                        )}
-                    />
-                )}
-            />
-        </Switch>
-    );
+        this.state = {
+            palettes: seedColors
+        };
+    }
+
+    findPalette = id => {
+        return this.state.palettes.find(palette => palette.id === id);
+    };
+
+    savePalette = newPalette => {
+        console.error('new', newPalette);
+        this.setState({ palettes: [...this.state.palettes, newPalette] });
+    };
+
+    render() {
+        return (
+            <Switch>
+                <Route
+                    exact
+                    path="/palette/new"
+                    render={routeProps => (
+                        <NewPaletteForm
+                            {...routeProps}
+                            savePalette={this.savePalette}
+                        />
+                    )}
+                />
+                <Route
+                    path="/palette/:paletteId/:colorId"
+                    render={routeProps => (
+                        <SingleColorPalette
+                            colorId={routeProps.match.params.colorId}
+                            palette={generatePalette(
+                                this.findPalette(
+                                    routeProps.match.params.paletteId
+                                )
+                            )}
+                        />
+                    )}
+                />
+                <Route
+                    exact
+                    path="/"
+                    render={routeProps => (
+                        <PaletteList
+                            palettes={this.state.palettes}
+                            {...routeProps}
+                        />
+                    )}
+                />
+                <Route
+                    exact
+                    path="/palette/:id"
+                    render={routeProps => (
+                        <Palette
+                            palette={generatePalette(
+                                this.findPalette(routeProps.match.params.id)
+                            )}
+                        />
+                    )}
+                />
+            </Switch>
+        );
+    }
 }
 
 export default App;
