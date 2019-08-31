@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import clsx from 'clsx';
-import { withStyles, makeStyles, useTheme } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
+// import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import { ChromePicker } from 'react-color';
+import { Button } from '@material-ui/core';
+// import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+// import ListItem from '@material-ui/core/ListItem';
+// import ListItemIcon from '@material-ui/core/ListItemIcon';
+// import ListItemText from '@material-ui/core/ListItemText';
+// import InboxIcon from '@material-ui/icons/MoveToInbox';
+// import MailIcon from '@material-ui/icons/Mail';
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 const styles = theme => ({
     root: {
@@ -77,9 +79,15 @@ const styles = theme => ({
 });
 
 class NewPaletteForm extends Component {
-    state = {
-        open: false
-    };
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            open: true,
+            currentColor: 'teal',
+            colors: ['purple', '#345678']
+        };
+    }
 
     handleDrawerOpen = () => {
         this.setState({ open: true });
@@ -89,9 +97,17 @@ class NewPaletteForm extends Component {
         this.setState({ open: false });
     };
 
+    updateCurrentColor = newColor =>
+        this.setState({ currentColor: newColor.hex });
+
+    addNewColor = () =>
+        this.setState({
+            colors: [...this.state.colors, this.state.currentColor]
+        });
+
     render() {
         const { classes } = this.props;
-        const { open, theme } = this.state;
+        const { open, currentColor, colors } = this.state;
 
         return (
             <div className={classes.root}>
@@ -135,6 +151,27 @@ class NewPaletteForm extends Component {
                         </IconButton>
                     </div>
                     <Divider />
+                    <Typography variant="h4">Design your palette</Typography>
+                    <Button variant="contained" color="secondary">
+                        Clear palette
+                    </Button>
+                    <Button variant="contained" color="primary">
+                        Random color
+                    </Button>
+                    <ChromePicker
+                        color={currentColor}
+                        onChangeComplete={newColor =>
+                            this.updateCurrentColor(newColor)
+                        }
+                    />
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        style={{ backgroundColor: currentColor }}
+                        onClick={this.addNewColor}
+                    >
+                        Add color
+                    </Button>
                 </Drawer>
                 <main
                     className={clsx(classes.content, {
@@ -142,6 +179,11 @@ class NewPaletteForm extends Component {
                     })}
                 >
                     <div className={classes.drawerHeader} />
+                    <ul>
+                        {colors.map(color => (
+                            <li key={color}>{color}</li>
+                        ))}
+                    </ul>
                 </main>
             </div>
         );
