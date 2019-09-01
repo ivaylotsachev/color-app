@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "51135a283fa43e0bd3b324c5fb9f15d4",
+    "revision": "d24b8d21ff20e8ba40d2551ad85dd9c2",
     "url": "/ivaylotsachev/color-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ivaylotsachev/color-app/static/css/2.e8e75e1a.chunk.css"
   },
   {
-    "revision": "a2591d99dce340c316cd",
+    "revision": "91907f7d2fb109eb9164",
     "url": "/ivaylotsachev/color-app/static/css/main.d9c864f2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ivaylotsachev/color-app/static/js/2.5a3ec575.chunk.js"
   },
   {
-    "revision": "a2591d99dce340c316cd",
-    "url": "/ivaylotsachev/color-app/static/js/main.b639b65c.chunk.js"
+    "revision": "91907f7d2fb109eb9164",
+    "url": "/ivaylotsachev/color-app/static/js/main.b41550ac.chunk.js"
   },
   {
     "revision": "3bf484fdc6eea9a48f16",
