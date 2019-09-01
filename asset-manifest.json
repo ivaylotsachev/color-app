@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/ivaylotsachev/color-app/static/css/main.d9c864f2.chunk.css",
-    "main.js": "/ivaylotsachev/color-app/static/js/main.b41550ac.chunk.js",
-    "main.js.map": "/ivaylotsachev/color-app/static/js/main.b41550ac.chunk.js.map",
-    "runtime~main.js": "/ivaylotsachev/color-app/static/js/runtime~main.9adcf972.js",
-    "runtime~main.js.map": "/ivaylotsachev/color-app/static/js/runtime~main.9adcf972.js.map",
-    "static/css/2.e8e75e1a.chunk.css": "/ivaylotsachev/color-app/static/css/2.e8e75e1a.chunk.css",
-    "static/js/2.5a3ec575.chunk.js": "/ivaylotsachev/color-app/static/js/2.5a3ec575.chunk.js",
-    "static/js/2.5a3ec575.chunk.js.map": "/ivaylotsachev/color-app/static/js/2.5a3ec575.chunk.js.map",
-    "index.html": "/ivaylotsachev/color-app/index.html",
-    "precache-manifest.cb6b8b9db00c98a811205956d5317143.js": "/ivaylotsachev/color-app/precache-manifest.cb6b8b9db00c98a811205956d5317143.js",
-    "service-worker.js": "/ivaylotsachev/color-app/service-worker.js",
-    "static/css/2.e8e75e1a.chunk.css.map": "/ivaylotsachev/color-app/static/css/2.e8e75e1a.chunk.css.map",
-    "static/css/main.d9c864f2.chunk.css.map": "/ivaylotsachev/color-app/static/css/main.d9c864f2.chunk.css.map",
-    "static/media/bg.svg": "/ivaylotsachev/color-app/static/media/bg.77428cd4.svg"
+    "main.css": "/color-app/static/css/main.d9c864f2.chunk.css",
+    "main.js": "/color-app/static/js/main.a933b211.chunk.js",
+    "main.js.map": "/color-app/static/js/main.a933b211.chunk.js.map",
+    "runtime~main.js": "/color-app/static/js/runtime~main.1a3245bc.js",
+    "runtime~main.js.map": "/color-app/static/js/runtime~main.1a3245bc.js.map",
+    "static/css/2.e8e75e1a.chunk.css": "/color-app/static/css/2.e8e75e1a.chunk.css",
+    "static/js/2.5a3ec575.chunk.js": "/color-app/static/js/2.5a3ec575.chunk.js",
+    "static/js/2.5a3ec575.chunk.js.map": "/color-app/static/js/2.5a3ec575.chunk.js.map",
+    "index.html": "/color-app/index.html",
+    "precache-manifest.767407aefeb1cd2a93341992e0f34b3e.js": "/color-app/precache-manifest.767407aefeb1cd2a93341992e0f34b3e.js",
+    "service-worker.js": "/color-app/service-worker.js",
+    "static/css/2.e8e75e1a.chunk.css.map": "/color-app/static/css/2.e8e75e1a.chunk.css.map",
+    "static/css/main.d9c864f2.chunk.css.map": "/color-app/static/css/main.d9c864f2.chunk.css.map",
+    "static/media/bg.svg": "/color-app/static/media/bg.77428cd4.svg"
   }
 }
