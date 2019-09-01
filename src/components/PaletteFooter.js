@@ -7,8 +7,13 @@ const PaletteFooter = props => {
 
     return (
         <footer className={classes.PaletteFooter}>
-            <span>{paletteName}</span>
-            <span className={classes.emoji}>{emoji}</span>
+            <span>
+                <em>
+                    <small>Current palette</small>
+                </em>{' '}
+                : <strong style={{ color: 'red' }}>{paletteName}</strong>
+            </span>
+            {/* <span className={classes.emoji}>{emoji}</span> */}
         </footer>
     );
 };
