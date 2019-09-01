@@ -61,12 +61,6 @@ class PaletteFormNav extends Component {
         console.error('paletteformnac', this.props);
     }
 
-    handleChange = event => {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    };
-
     componentDidMount() {
         ValidatorForm.addValidationRule('isPaletteNameUnique', value =>
             this.props.palettes.every(
@@ -76,7 +70,15 @@ class PaletteFormNav extends Component {
         );
     }
 
+    handleChange = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+    };
+
     showForm = () => this.setState({ formShowing: true });
+
+    hideForm = () => this.setState({ formShowing: false });
 
     render() {
         const { classes, open, palettes, handleSubmit } = this.props;
@@ -132,7 +134,8 @@ class PaletteFormNav extends Component {
                 {this.state.formShowing && (
                     <PaletteMetaForm
                         palettes={palettes}
-                        handleSubmit={handleSubmit}
+                        handleSubmit={newPalette => handleSubmit(newPalette)}
+                        hideForm={this.hideForm}
                     />
                 )}
             </div>
