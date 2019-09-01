@@ -1,4 +1,4 @@
-import { DRAWER_WIDTH } from '../constrants';
+import { DRAWER_WIDTH } from '../constants';
 
 const drawerWidth = DRAWER_WIDTH;
 
