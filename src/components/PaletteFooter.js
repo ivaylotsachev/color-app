@@ -13,7 +13,7 @@ const PaletteFooter = props => {
                 </em>{' '}
                 : <strong style={{ color: 'red' }}>{paletteName}</strong>
             </span>
-            {/* <span className={classes.emoji}>{emoji}</span> */}
+            <span className={classes.emoji}>{emoji}</span>
         </footer>
     );
 };
