@@ -120,6 +120,7 @@ class NewPaletteForm extends Component {
     };
 
     handleSubmit = newPaletteName => {
+        alert('handleSubmit called');
         const newPalette = {
             paletteName: newPaletteName,
             id: newPaletteName.toLowerCase().replace(/ /g, '-'),

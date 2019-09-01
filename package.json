@@ -10,6 +10,7 @@
     "chroma-js": "^2.0.6",
     "classnames": "^2.2.6",
     "clsx": "^1.0.4",
+    "emoji-mart": "^2.11.1",
     "rc-slider": "^8.6.13",
     "react": "^16.9.0",
     "react-color": "^2.17.3",
