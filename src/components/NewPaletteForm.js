@@ -70,7 +70,6 @@ class NewPaletteForm extends Component {
     };
 
     removeColor = colorName => {
-        console.error('remove', colorName, this.state.colors);
         this.setState({
             colors: this.state.colors.filter(color => color.name !== colorName)
         });
