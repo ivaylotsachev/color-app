@@ -4,7 +4,10 @@ export default {
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        [sizes.down('extraSm')]: {
+            overflow: 'auto'
+        }
     },
     colors: {
         height: '90%'

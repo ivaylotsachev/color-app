@@ -4,8 +4,7 @@
 
 ### Find me here:
 
-### [LinkedIn](https://www.linkedin.com/in/ivaylo-tsachev-92bb36a9/)
-
-### [Facebook](https://www.facebook.com/ivailotsachev?ref=bookmarks)
+[LinkedIn](https://www.linkedin.com/in/ivaylo-tsachev-92bb36a9/)
+[Facebook](https://www.facebook.com/ivailotsachev?ref=bookmarks)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

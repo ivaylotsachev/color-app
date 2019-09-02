@@ -2,6 +2,7 @@ export default {
     up() {},
     down(size) {
         const sizes = {
+            extraSm: '375px',
             xs: '575.98px',
             sm: '767.98px',
             md: '991.98px',
