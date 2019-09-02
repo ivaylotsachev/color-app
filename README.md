@@ -1,6 +1,6 @@
 # Color Palette React App
 
-## Just an attempt of clonning the original website [Flat Ui Colors](https://flatuicolors.com) practing my react skills.
+## Just an attempt of clonning the original website [Flat Ui Colors](https://flatuicolors.com) practicing my react skills.
 
 ### Find me here:
 
