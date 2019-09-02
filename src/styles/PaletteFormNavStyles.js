@@ -38,8 +38,7 @@ const styles = theme => ({
         },
         [sizes.down('md')]: {
             marginRight: '0.5rem',
-            width: '100% !important',
-            border: '1px solid black'
+            width: '100% !important'
         },
 
         [sizes.down('xs')]: {

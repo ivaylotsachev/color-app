@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MiniPalette from './MiniPalette';
 import { withStyles } from '@material-ui/styles';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styles from '../styles/PaletteListStyles';
 
 class PaletteList extends Component {
@@ -19,20 +20,27 @@ class PaletteList extends Component {
                         <h1>React Colors</h1>
                         <Link to="/palette/new">Create palette</Link>
                     </nav>
-                    <div className={classes.palettes}>
+
+                    <TransitionGroup className={classes.palettes}>
                         {palettes
                             .map(palette => (
-                                <MiniPalette
+                                <CSSTransition
                                     key={palette.id}
-                                    {...palette}
-                                    deletePalette={deletePalette}
-                                    handleClick={() =>
-                                        this.goToPalette(palette.id)
-                                    }
-                                />
+                                    classNames="fade"
+                                    timeout={300}
+                                >
+                                    <MiniPalette
+                                        key={palette.id}
+                                        {...palette}
+                                        deletePalette={deletePalette}
+                                        handleClick={() =>
+                                            this.goToPalette(palette.id)
+                                        }
+                                    />
+                                </CSSTransition>
                             ))
                             .reverse()}
-                    </div>
+                    </TransitionGroup>
                 </div>
             </div>
         );

@@ -5,7 +5,6 @@ const styles = {
         padding: '0.5rem',
         position: 'relative',
         overflow: 'hidden',
-        border: '1px solid black',
         cursor: 'pointer',
         '&:hover': {},
         '&:hover svg': {

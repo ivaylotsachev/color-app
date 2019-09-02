@@ -37,7 +37,6 @@ export default {
         '& .rc-slider-handle, .rc-slider-handle:active, .rc-slider-handle:focus,.rc-slider-handle:hover': {
             backgroundColor: 'green',
             outline: 'none',
-            border: '2px solid green',
             boxShadow: 'none',
             width: '13px',
             height: '13px',
